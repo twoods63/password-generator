@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  <title>Password Generator</title>
+</head>
+<body>
+  <div class="window" style="width: 300px;">
+    <div class="title-bar">
+      <div class="title-bar-text">Password Generator</div>
+    </div>
+    <div class="window-body">
+      <p>Password: <span id="password"></span></p>
+      <button onclick="generatePassword()">Generate</button>
+    </div>
+  </div>
+  <script>
+    function generatePassword() {
+      document.getElementById('password').textContent = Math.random().toString(36).slice(-10);
+    }
+  </script>
+</body>
+</html>
